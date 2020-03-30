@@ -1,0 +1,27 @@
+<doctype html>
+<html lang= "en">
+
+	<head>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+		<title>Accueil</title>
+	</head>
+	<body>
+
+		<h1>Bonjour !<br>Bienvenue dans notre projet informatique ENSAE !<br><br></h1>
+		<img src="{{ url_for('static', filename='images/logoensae.jpg') }}" alt="Photo logo" class="center" />
+		<h2> L'objectif de cette web application est de trouver le meilleur endroit où habiter en fonction du lieu de travail.</h2>
+		<p><br></p>
+		<h4>Merci de bien vouloir rentrer votre adresse de travail</h4>
+		<form action= "." method= "POST" title ="Please enter your adress">
+			<input type= "text" name= "text_id"><br>
+			<i> Merci de ne pas mettre d'accent !</i>
+			<h4>Voulez-vous afficher juste les points ou toute la carte Isochrone ?</h4>
+				<input type="radio" name="question" value="oui" id="oui" /> <label for="oui">Avec Isochrone</label>
+				<input type="radio" name="question" value="non" id="non" /> <label for="non">Sans Isochrone</label>
+			<br><h4><button type= "submit">Rechercher</button></h4>
+		</form>
+		<footer>
+			<P>© 2020 Hugo Cart ; Axel Durand ; Jayson Sokolowski ; </p>
+		</footer>
+	</body>
+</html>
